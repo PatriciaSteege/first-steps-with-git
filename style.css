@@ -16,3 +16,8 @@ h3 {
 .header {
   padding: 25px;
 }
+.header {
+  text-align: center;
+  background-color: darkcyan;
+  padding: 50px;
+}
