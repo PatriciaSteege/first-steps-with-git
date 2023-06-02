@@ -4,20 +4,26 @@
 body {
   margin: 0px;
 }
-body {
-  font-family: "Arial", "Verdana", sans-serif;
+* {
+  font-family: "Roboto", sans-serif;
 }
 h1,
 h2,
 h3 {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Roboto", Courier, monospace;
+  color: darkred;
 }
-.main,
-.header {
-  padding: 25px;
-}
+/*###################################
+specific stylin*/
+
 .header {
   text-align: center;
   background-color: darkcyan;
-  padding: 50px;
+  padding: 30px 50px;
+}
+
+.main {
+  max-width: 800px;
+  margin: auto;
+  padding: 16px;
 }
