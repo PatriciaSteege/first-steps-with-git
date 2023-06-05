@@ -35,12 +35,20 @@ a {
   padding: 10px;
   margin-top: 20px;
 }
-a:hover {
+.nav-link:hover {
   background-color: greenyellow;
 }
-a:active {
-  color: aqua;
+.nav-link:active {
+  background-color: green;
 }
+.contact:hover {
+  color: aliceblue;
+}
+.contact:active {
+  background-color: bisque;
+}
+
+/*
 article:nth-child(2) {
   border-top: 2px solid currentColor;
 }
@@ -49,4 +57,12 @@ article:nth-child(3) {
 }
 article:nth-child(4) {
   border-top: 2px solid currentColor;
+}
+*/
+.main > * {
+  border-top: 20px dotted;
+  color: brown;
+}
+.main > *:first-child {
+  border-top: none;
 }
