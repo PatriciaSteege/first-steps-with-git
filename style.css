@@ -15,8 +15,11 @@ h3 {
   color: darkred;
 }
 /*###################################
-specific stylin*/
-
+specific styling*/
+::selection {
+  background-color: black;
+  color: orange;
+}
 .header {
   text-align: center;
   background-color: darkcyan;
@@ -65,4 +68,11 @@ article:nth-child(4) {
 }
 .main > *:first-child {
   border-top: none;
+}
+.profession::before {
+  content: "🦋";
+}
+
+.profession::after {
+  content: "🦋";
 }
