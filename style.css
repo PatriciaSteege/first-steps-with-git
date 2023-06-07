@@ -1,13 +1,16 @@
 * {
   box-sizing: border-box;
 }
+
+html {
+  font-family: "Roboto" sans-serif;
+}
+
 body {
   margin: 0px;
   background-color: darkorange;
 }
-* {
-  font-family: "Roboto", sans-serif;
-}
+
 h1,
 h2,
 h3 {
@@ -75,4 +78,13 @@ article:nth-child(4) {
 
 .profession::after {
   content: "🦋";
+}
+
+.experience-heading {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.experience-subheading {
+  display: inline-block;
 }
