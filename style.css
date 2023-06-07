@@ -24,9 +24,23 @@ specific styling*/
   color: orange;
 }
 .header {
+  -font-size: px;
   text-align: center;
   background-color: darkcyan;
-  padding: 30px 50px;
+  padding-top: 30px;
+  padding: 30px;
+  padding-left: 100px;
+  position: relative;
+}
+
+.hire {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  padding: 8px;
+  border-radius: 4px;
+  background: greenyellow;
+  color: black;
 }
 
 .main {
@@ -87,4 +101,11 @@ article:nth-child(4) {
 
 .experience-subheading {
   display: inline-block;
+}
+
+.heading {
+  font-size: 40px;
+
+  position: relative;
+  margin-right: 10px;
 }
