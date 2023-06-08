@@ -4,6 +4,7 @@
 
 html {
   font-family: "Roboto" sans-serif;
+  font-size: 20px;
 }
 
 body {
@@ -31,7 +32,15 @@ specific styling*/
   padding-left: 6rem;
   position: relative;
 }
-
+.top {
+  font-size: 3rem;
+}
+.title {
+  font-size: 0.5em;
+}
+.profession {
+  font-size: 1.5em;
+}
 .hire {
   position: absolute;
   right: 1rem;
@@ -43,7 +52,7 @@ specific styling*/
 }
 
 .main {
-  max-width: 48rem;
+  max-width: 70ch;
   margin: auto;
   padding: 1rem;
 }
@@ -79,7 +88,7 @@ article:nth-child(4) {
 }
 */
 .main > * {
-  border-top: 1.25rem dotted;
+  border-top: 1rem dotted;
   color: brown;
 }
 .main > *:first-child {
