@@ -4,9 +4,19 @@
 
 html {
   font-family: "Roboto" sans-serif;
-  font-size: 20px;
+  font-size: 10px;
+}
+@media screen and (min-width: 786px) {
+  html {
+    font-size: 25px;
+  }
 }
 
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 30px;
+  }
+}
 body {
   margin: 0rem;
   background-color: darkorange;
@@ -36,11 +46,13 @@ specific styling*/
   font-size: 3rem;
 }
 .title {
-  font-size: 0.5em;
+  font-size: 1em;
 }
+
 .profession {
-  font-size: 1.5em;
+  font-size: 0.25em;
 }
+
 .hire {
   position: absolute;
   right: 1rem;
@@ -49,6 +61,26 @@ specific styling*/
   border-radius: 0.25rem;
   background: greenyellow;
   color: black;
+}
+
+@media screen and (min-width: 992px) {
+  .hire {
+    position: fixed;
+  }
+}
+@media print {
+  .hire {
+    dispay: none;
+  }
+  .nav-link {
+    dispay: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main > * + * {
+    margin-top: 5rem;
+  }
 }
 
 .main {
