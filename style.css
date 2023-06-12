@@ -62,6 +62,19 @@ specific styling*/
   background: greenyellow;
   color: black;
 }
+ul {
+  list-style: none;
+}
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flexbox2 {
+  display: flex;
+  gap: 1rem;
+}
 
 @media screen and (min-width: 992px) {
   .hire {
@@ -70,16 +83,23 @@ specific styling*/
 }
 @media print {
   .hire {
-    dispay: none;
+    display: none;
   }
   .nav-link {
-    dispay: none;
+    display: none;
   }
 }
 
 @media screen and (min-width: 768px) {
   .main > * + * {
     margin-top: 5rem;
+  }
+  .flexbox {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .flexbox2 {
+    flex-direction: column;
   }
 }
 
