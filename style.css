@@ -1,3 +1,10 @@
+:root {
+  --clr-header: #588b8b;
+  --clr-main: #e6ebe0;
+  --clr-h: #ed6a5a;
+  --clr-back: snow;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -19,24 +26,23 @@ html {
 }
 body {
   margin: 0rem;
-  background-color: darkorange;
 }
 
 h1,
 h2,
 h3 {
   font-family: "Roboto", Courier, monospace;
-  color: darkred;
+  color: var(--clr-h);
 }
 /*###################################
 specific styling*/
 ::selection {
-  background-color: black;
-  color: orange;
+  background-color: var(--clr-back);
+  color: var(--clr-header, grey);
 }
 .header {
   text-align: center;
-  background-color: darkcyan;
+  background-image: linear-gradient (var(--clr-header), var(--clr-main));
   padding-top: 2rem;
   padding: 2rem;
   padding-left: 6rem;
@@ -59,7 +65,7 @@ specific styling*/
   top: 1rem;
   padding: 0.5rem;
   border-radius: 0.25rem;
-  background: greenyellow;
+  background: hsl(180, 85%, 29%);
   color: black;
 }
 ul {
@@ -141,7 +147,7 @@ article:nth-child(4) {
 */
 .main > * {
   border-top: 1rem dotted;
-  color: brown;
+  border-color: salmon;
 }
 .main > *:first-child {
   border-top: none;
@@ -168,4 +174,10 @@ article:nth-child(4) {
 
   position: relative;
   margin-right: 0.75rem;
+}
+
+.footer {
+  width: fit-content;
+  background-color: transparent;
+  background-image: linear-gradient(to right, salmon, white);
 }

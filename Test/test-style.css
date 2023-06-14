@@ -41,3 +41,47 @@ body {
     background-color: palevioletred;
   }
 }
+
+/* Task */
+
+.container {
+  width: fit-content;
+  position: relative;
+}
+
+.profile-pic {
+  border-radius: 50%;
+}
+
+.dot {
+  background-color: green;
+
+  width: 25px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  outline: 5px solid palevioletred;
+
+  position: absolute;
+  right: 10px;
+  bottom: 30px;
+}
+
+.forest {
+  width: 500px;
+  height: 500px;
+  background-image: url(https://images.pexels.com/photos/17092438/pexels-photo-17092438/free-photo-of-strasse-menschen-wetter-sturm.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load);
+}
+
+.Div {
+  height: 200px;
+  width: 800px;
+  margin-bottom: 1rem;
+}
+
+.gradient-1 {
+  background-image: linear-gradient(red 20%, blue 80%);
+}
+
+.gradient-2 {
+  background-image: linear-gradient(blue 100px, green 100px);
+}
