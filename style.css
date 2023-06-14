@@ -3,53 +3,66 @@
   --clr-main: #e6ebe0;
   --clr-h: #ed6a5a;
   --clr-back: snow;
+  --clr-txt: black;
+  --clr-accent: #0a8a8a;
 }
 
-* {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
 html {
   font-family: "Roboto" sans-serif;
-  font-size: 10px;
+  font-size: 16px;
 }
-@media screen and (min-width: 786px) {
+@media screen and (min-width: 768px) {
   html {
-    font-size: 25px;
+    font-size: 18px;
   }
 }
 
 @media screen and (min-width: 992px) {
   html {
-    font-size: 30px;
+    font-size: 20px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Roboto", Courier, monospace;
   }
 }
 body {
   margin: 0rem;
+  background-color: var(--clr-main);
+  color: var(--clr-txt);
+}
+*::selection {
+  background-color: var(--clr-back);
 }
 
-h1,
-h2,
-h3 {
-  font-family: "Roboto", Courier, monospace;
-  color: var(--clr-h);
+a,
+a:link,
+a:hover,
+a:visited,
+a:active {
+  color: var(--clr-txt);
 }
-/*###################################
+/***************************************************
 specific styling*/
-::selection {
-  background-color: var(--clr-back);
-  color: var(--clr-header, grey);
-}
+
 .header {
+  padding: 3rem 1rem;
+  padding-top: 4.5rem;
   text-align: center;
-  background-image: linear-gradient (var(--clr-header), var(--clr-main));
-  padding-top: 2rem;
-  padding: 2rem;
-  padding-left: 6rem;
+  background-image: linear-gradient(90deg, var(--clr-header), var(--clr-main));
   position: relative;
+  color: var(--clr-txt);
 }
 .top {
-  font-size: 3rem;
+  font-size: 4rem;
 }
 .title {
   font-size: 1em;
@@ -59,27 +72,22 @@ specific styling*/
   font-size: 0.25em;
 }
 
+.profession::before {
+  content: "🦋";
+}
+
+.profession::after {
+  content: "🦋";
+}
+
 .hire {
   position: absolute;
   right: 1rem;
   top: 1rem;
   padding: 0.5rem;
   border-radius: 0.25rem;
-  background: hsl(180, 85%, 29%);
-  color: black;
-}
-ul {
-  list-style: none;
-}
-.flexbox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.flexbox2 {
-  display: flex;
-  gap: 1rem;
+  background: var(--clr-accent);
+  color: var(--clr-txt);
 }
 
 @media screen and (min-width: 992px) {
@@ -96,88 +104,95 @@ ul {
   }
 }
 
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @media screen and (min-width: 768px) {
-  .main > * + * {
-    margin-top: 5rem;
-  }
   .flexbox {
     flex-direction: row;
     justify-content: center;
   }
-  .flexbox2 {
-    flex-direction: column;
+}
+
+.nav-link {
+  padding: 0.25rem 0.5rem;
+  color: var(--clr-main);
+}
+
+.nav-link:hover {
+  background-color: var(--clr-main);
+  color: var(--clr-txt);
+}
+
+.nav-link:active {
+  background-color: var(--clr-accent);
+  color: var(--clr-txt);
+}
+
+.nav-link:visited {
+  color: var(--clr-txt);
+}
+
+@media screen and (min-width: 768px) {
+  .nav-link + .nav-link {
+    margin-left: 1rem;
   }
 }
 
 .main {
   max-width: 70ch;
-  margin: auto;
+  margin: 0 auto;
   padding: 1rem;
 }
-a {
-  color: black;
-  width: 6rem;
-  border: 0.75rem;
-  padding: 0.75rem;
-  margin-top: 1.25rem;
-}
-.nav-link:hover {
-  background-color: greenyellow;
-}
-.nav-link:active {
-  background-color: green;
-}
-.contact:hover {
-  color: aliceblue;
-}
-.contact:active {
-  background-color: bisque;
+
+.main > * + * {
+  margin-top: 3rem;
 }
 
-/*
-article:nth-child(2) {
-  border-top: 2px solid currentColor;
+@media screen and (min-width: 768px) {
+  .main > * + * {
+    margin-top: 5rem;
+  }
 }
-article:nth-child(3) {
-  border-top: 2px solid currentColor;
-}
-article:nth-child(4) {
-  border-top: 2px solid currentColor;
-}
-*/
+
 .main > * {
-  border-top: 1rem dotted;
-  border-color: salmon;
+  border-top: 0.125rem dotted var(--clr-accent);
+  padding: 0 1rem;
 }
+
 .main > *:first-child {
   border-top: none;
 }
-.profession::before {
-  content: "🦋";
-}
 
-.profession::after {
-  content: "🦋";
+.article-heading {
+  position: relative;
+  left: -1rem;
 }
 
 .experience-heading {
-  display: inline-block;
-  margin-right: 0.75rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.experience-subheading {
-  display: inline-block;
+@media screen and (min-width: 768px) {
+  .experience-heading {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
 }
 
-.heading {
-  font-size: 2.5rem;
-
-  position: relative;
-  margin-right: 0.75rem;
+.contact:hover {
+  padding: 0.1rem 0.25rem;
+  background-color: var(--clr-accent);
 }
 
 .footer {
   width: fit-content;
   background-color: transparent;
-  background-image: linear-gradient(to right, salmon, white);
+  background-image: linear-gradient(to right, var(--clr-accent), white);
 }
