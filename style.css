@@ -117,9 +117,18 @@ specific styling*/
   }
 }
 
+@media screen and (min-width: 768px) {
+  .content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+  }
+}
+
 .nav-link {
   padding: 0.25rem 0.5rem;
   color: var(--clr-main);
+  transition: background-color 0.5s;
 }
 
 .nav-link:hover {
