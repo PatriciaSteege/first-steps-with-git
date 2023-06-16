@@ -61,6 +61,11 @@ specific styling*/
   position: relative;
   color: var(--clr-txt);
 }
+
+.header:hover .hire {
+  transform: scale(2);
+}
+
 .top {
   font-size: 4rem;
 }
@@ -82,12 +87,13 @@ specific styling*/
 
 .hire {
   position: absolute;
-  right: 1rem;
-  top: 1rem;
+  right: 2rem;
+  top: 2rem;
   padding: 0.5rem;
   border-radius: 0.25rem;
   background: var(--clr-accent);
   color: var(--clr-txt);
+  transition: 0.5s;
 }
 
 @media screen and (min-width: 992px) {
